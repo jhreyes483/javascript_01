@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5</title>
+</head>
+<body>
+
+	<label for="nombre">Nombre :</label>
+	<input type="text" id="nombre">
+
+	<label for="cedula">Cedula :</label>
+	<input type="number" id="cedula">
+
+	<label for="telefono">Telefono :</label>
+	<input type="number" id="telefono">
+
+	<button>Validar</button>
+	
+	<script>
+		var a = "Alexander";
+		var b = "1014";
+		var c = "2327405";
+		
+		var button = document.querySelector("button");
+		const input = document.querySelectorAll('input');
+
+		button.addEventListener("click", function(){
+			var validacion = [];
+			input.forEach(function(elem) {
+				validacion.push(elem.value;
+			});
+
+			var result;
+
+			a === validacion[0].trim()? result = "El nombre ingresado es igual a " + a + "----": result = "El nombre  no es igual a " + a + "----";
+			b === validacion[1].trim()? result += "la cedula ingresado es igual a " + b + "----": result += "la cedula  no es igual a " + b + "----";
+			c === validacion[2].trim()? result += "El telefono ingresado es igual a " + c : result += "El telefono  no es igual a " + c ;
+			alert(result);
+		});
+	</script>
+</body>
+</html>

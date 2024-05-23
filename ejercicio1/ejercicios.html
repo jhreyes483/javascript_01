@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicios</title>
+</head>
+<body>
+
+<style>
+	table, th, td {
+	border: 1px solid black;
+	}
+	#seleccionador {
+		display: inline-grid;
+	    padding: 7px;
+	    border: solid 1px;
+	    margin-top: 20px;
+	}
+	button {
+		margin-left: 26%;
+    	margin-top: 10px;
+	}
+
+	table , #seleccionador {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#content {
+		text-align: center;
+		border: solid #5B6DCD 91px;
+	}
+</style>
+<div id="content" >
+	
+	<h1 >Mi Fruver</h1>
+	<h3 id="titulo">Produtos : </h3>
+
+	<table >
+		<thead>
+			<tr>
+				<th>Fruta</th>
+				<th>Cantidad</th>
+				<th>Valor</th>
+			</tr>
+		</thead>
+		<tbody id="contenido">
+		</tbody>
+	</table>
+	<div id="seleccionador">
+		<label>Listado de Frutas</label>
+		<select id="frutas" >
+		</select>
+		<label>Cantidad de frutas a comprar</label>
+		<input type="number" id="cantidad">
+		<button>Comprar</button>
+	</div>
+</div>
+
+<script type="text/javascript" src="js.js">
+</script>
+</body>
+</html>

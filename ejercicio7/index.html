@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio7</title>
+</head>
+
+<style type="text/css">
+	
+	#campos {
+		display: inline-grid;
+		width: 250px;
+	}
+</style>
+<body>
+	<div id="campos">
+		<label>Nombre</label>
+		<input type="text" id="nombre">
+		<label>Cédula</label>
+		<span id="sp1" style="color:red; display: none;">(ingrese solo numeros para la cedula)</span>
+		<input type="number" id="cedula">
+		<label>Teléfono</label>
+		<span id="sp2" style="color:red; display: none;">(ingrese solo numeros para el telefono)</span>
+		<input type="number" id="telefono">
+		<label>Dirección</label>
+		<input type="text" id="direccion">
+		<label>Correo Electronico</label>
+		<span id="sp3" style="color:red; display: none;">(Correo Electronico debe tener arroba)</span>
+		<input type="email" id="correo">
+		<br>
+		<button>Validar	</button>
+	</div>
+
+
+	<script type="text/javascript">
+		var button = document.querySelector("button");
+
+		button.addEventListener("click",   validar  );
+
+		function validar(){
+			console.log("validar");
+			var regex = /^[0-9]*$/g ;
+
+			var cedula = document.getElementById('cedula').value;
+			var telefono = document.getElementById('telefono').value;
+			var correo = document.getElementById('correo').value;
+			var sp1 = document.getElementById('sp1');
+			var sp2 = document.getElementById('sp2');
+			var sp3 = document.getElementById('sp3');
+
+			cedula.match(regex) ? sp1.style.display ="none": sp1.style.display ="block"
+			telefono.match(regex) ? sp2.style.display ="none": sp2.style.display ="block"
+			correo.includes("@") ? sp3.style.display ="none": sp3.style.display ="block"
+		}
+
+	</script>
+</body>
+</html>
